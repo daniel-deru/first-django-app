@@ -1,0 +1,89 @@
+body {
+    text-align: center;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 2rem;
+}
+
+.todo-container {
+    background-color: #9efa9e;
+    height: fit-content;
+    padding: 1rem 1.6rem;
+    border-radius: 10px;
+}
+
+.todo-container a{
+    font-size: 2em;
+    text-decoration: none;
+    color: black;
+}
+
+.todo-container a:hover {
+    color: white;
+}
+
+form {
+    background-color: #21B021;
+    width: 100vw;
+    padding: 20px 0px;
+
+}
+
+form input[type="text"] {
+    background-color: white;
+    font-size: 1em;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 10px;
+}
+
+form button {
+    background-color: #9efa9e;
+    color: black;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+ul {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+
+
+}
+
+ul li {
+    text-decoration: none;
+    list-style-type: none;
+    background-color: #9efa9e;
+    margin-bottom: 1rem;
+    font-size: 1em;
+    padding: 1rem 0;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #21B021;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+form a {
+    color: white;
+    margin: auto 1rem;
+    text-decoration: none;
+
+}
