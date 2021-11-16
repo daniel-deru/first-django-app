@@ -1,13 +1,6 @@
 {% extends 'main/main.html' %}
 
 {% block content %}
-    {% block form %}
-        <form method="post">
-            <a href="{% url 'index' %}">Go Home</a>
-            <input type="text" name="item" >
-            <button type="submit">Add Item</button>
-        </form>    
-    {% endblock %}
     <h1>{{list}}</h1>
     <ul>
         {% for item in items %}

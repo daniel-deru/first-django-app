@@ -1,0 +1,20 @@
+<header>
+    <div>
+        <a href="{% url 'index' %}">Go Home</a>
+    </div>
+    <div>
+        <form action="" method="post">
+            {% csrf_token %}
+            {% if request.path == "/" %}
+                <input type="text" name="todolist" required>
+                <button type="submit">Add Todolist</button>
+            {% else %}
+                <input type="text" name="item" >
+                <button type="submit">Add Item</button>
+            {% endif %}
+        </form>
+    </div>
+    <div>
+        <a href="{% url 'login' %}">Login</a>
+    </div>
+</header>

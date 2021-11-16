@@ -10,15 +10,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 </head>
 <body>
+    {% include 'main/header.html' %}
     {% block content %}
-    <form action="" method="post">
-        {% csrf_token %}
-        {% block form %}
-            <a href="{% url 'index' %}">Go Home</a>
-            <input type="text" name="todolist" required>
-            <button type="submit">Add Todolist</button>
-        {% endblock %}
-    </form>
     <div class="grid-container">
         {% for todo in todos %}
             <div class="todo-container">
@@ -27,6 +20,6 @@
             </div>
         {% endfor %}
     </div>
-    {% endblock %}
+    {% endblock content %}
 </body>
 </html>

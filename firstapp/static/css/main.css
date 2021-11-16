@@ -4,6 +4,22 @@ body {
     font-family: sans-serif;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #21B021;
+    width: 100vw;
+    padding: 20px 0px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0px 20px;
+}
+
 
 .grid-container {
     display: grid;
@@ -32,12 +48,12 @@ body {
     color: white;
 }
 
-form {
+/* form {
     background-color: #21B021;
     width: 100vw;
     padding: 20px 0px;
 
-}
+} */
 
 form input[type="text"] {
     background-color: white;
@@ -55,6 +71,14 @@ form button {
     border-radius: 10px;
     font-size: 1em;
     cursor: pointer;
+}
+
+form label {
+    display: block;
+}
+
+#login button {
+    display: block;
 }
 
 ul {

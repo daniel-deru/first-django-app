@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import TodoList, TodoListItems
+from .forms import LoginForm
 
 def login(request):
-    pass
+    form = LoginForm()
+    return render(request, "main/login.html", {'form': form})
 
 def index(request):
     if request.method == "POST":
