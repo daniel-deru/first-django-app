@@ -5,6 +5,10 @@ from .forms import LoginForm
 
 def login(request):
     form = LoginForm()
+    if request.method == "POST":
+        data = request.POST
+        if data.is_valid():
+            print("data is valid")
     return render(request, "main/login.html", {'form': form})
 
 def index(request):

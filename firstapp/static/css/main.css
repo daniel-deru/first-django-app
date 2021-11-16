@@ -48,13 +48,6 @@ header a {
     color: white;
 }
 
-/* form {
-    background-color: #21B021;
-    width: 100vw;
-    padding: 20px 0px;
-
-} */
-
 form input[type="text"] {
     background-color: white;
     font-size: 1em;
@@ -75,10 +68,41 @@ form button {
 
 form label {
     display: block;
+    margin: 0;
 }
 
 #login button {
     display: block;
+    margin: auto;
+}
+
+#login {
+    text-align: center;
+    background-color: #21B021;
+    width: 50%;
+    padding: 4rem;
+    margin: auto;
+    margin-top: 3rem;
+    border-radius: 10px;
+}
+
+#login input {
+    margin-bottom: 2rem;
+    width: 80%;
+    font-size: 1em;
+    padding: 0.5rem 0.8rem;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+#login label {
+    float: none;
+    color: white;
+    width: 80%;
+    text-align: left;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 ul {
