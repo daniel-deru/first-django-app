@@ -23,6 +23,7 @@
         {% for todo in todos %}
             <div class="todo-container">
                 <a href="{% url 'todos' todo.id%}">{{ todo }}</a>
+                <a href="{% url 'home' todo.id %}"><i class="fas fa-times"></i></a>
             </div>
         {% endfor %}
     </div>

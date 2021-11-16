@@ -17,10 +17,13 @@ body {
     height: fit-content;
     padding: 1rem 1.6rem;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .todo-container a{
-    font-size: 2em;
+    display: block;
+    font-size: 1.5rem;
     text-decoration: none;
     color: black;
 }

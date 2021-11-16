@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import TodoList, TodoListItems
 
+def login(request):
+    pass
+
 def index(request):
     if request.method == "POST":
         todo = request.POST.get("todolist")
@@ -9,8 +12,14 @@ def index(request):
             todolist = TodoList(name=todo)
             todolist.save()
             redirect("index")
+
     todos = TodoList.objects.all()
     return render(request, "main/main.html", {"todos": todos})
+
+def home(request, todo_id):
+    delete_todo = TodoList.objects.get(id=todo_id)
+    delete_todo.delete()
+    return redirect('index')
 
 def todos(request, todo_id):
     todo = TodoList.objects.get(id=todo_id)
