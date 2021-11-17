@@ -4,7 +4,19 @@
     <form action="" method="post" id="login">
         {% csrf_token %}
         {{ form }}
-        <button type="submit">Login</button>
-
+        <button type="submit">
+            {% if page == 'login' %}
+                Login
+            {% elif page == 'register' %}
+                Register
+            {% endif %}
+        </button>  
+            <p>
+                {% if page == 'login' %}
+                    Don't have an account?<a href="{% url 'register' %}"> Register </a>
+                {% elif page == 'register' %}
+                    Already have an account?<a href="{% url 'login' %}"> Login </a>
+                {% endif %}here.
+            </p>
     </form>
 {% endblock content %}

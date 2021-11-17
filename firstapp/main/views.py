@@ -1,15 +1,29 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import TodoList, TodoListItems
-from .forms import LoginForm
+from .forms import LoginForm, RegisterForm
 
-def login(request):
-    form = LoginForm()
+def register(request):
+    form = RegisterForm()
+    page = "register"
     if request.method == "POST":
         data = request.POST
         if data.is_valid():
             print("data is valid")
-    return render(request, "main/login.html", {'form': form})
+    context = {
+        "form": form,
+        "page": page
+    }
+    return render(request, "main/login.html", context)
+
+def login(request):
+    form = LoginForm()
+    page = "login"
+    context = {
+        "form": form,
+        "page": page
+    }
+    return render(request, "main/login.html", context)
 
 def index(request):
     if request.method == "POST":
@@ -22,6 +36,7 @@ def index(request):
     todos = TodoList.objects.all()
     return render(request, "main/main.html", {"todos": todos})
 
+# This handles the click for the specific todo
 def home(request, todo_id):
     delete_todo = TodoList.objects.get(id=todo_id)
     delete_todo.delete()
