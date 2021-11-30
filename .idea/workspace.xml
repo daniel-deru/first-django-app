@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f9f205ec-6097-4805-ae94-dfef302d8922" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/firstapp/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/firstapp/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstapp/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/firstapp/main/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstapp/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/firstapp/main/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="21eKLC35WvLVeT0eieK1UPmjFA0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9f205ec-6097-4805-ae94-dfef302d8922" name="Default Changelist" comment="" />
+      <created>1638296057752</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638296057752</updated>
+      <workItem from="1638296058723" duration="2000" />
+    </task>
+    <servers />
+  </component>
+</project>

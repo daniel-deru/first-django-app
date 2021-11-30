@@ -2,23 +2,36 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import TodoList, TodoListItems
 from .forms import LoginForm, RegisterForm
+from django.contrib.auth.models import User
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate
 
 def register(request):
-    form = RegisterForm()
+    form = UserCreationForm()
     page = "register"
     if request.method == "POST":
-        data = request.POST
-        if data.is_valid():
-            print("data is valid")
+        user = UserCreationForm(request.POST)
+        if user.is_valid():
+            user.save()
+            login(request, user)
     context = {
         "form": form,
         "page": page
     }
     return render(request, "main/login.html", context)
 
-def login(request):
+def loginPage(request):
     form = LoginForm()
     page = "login"
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+        else:
+            print("the login was unsuccessful")
     context = {
         "form": form,
         "page": page
